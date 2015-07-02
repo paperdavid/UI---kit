@@ -395,6 +395,12 @@ div[class*="column"] {
   box-sizing: border-box;
   padding: 0 18px;
 }
+* {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
 body {
   background-color: #f0f2f5;
 }
@@ -864,25 +870,29 @@ li.pagination__next {
   padding: 0 10px 0 5px;
   color: #3f3f3f;
 }
-.form-field .on {
+form {
+  margin: .5em 0;
+}
+/*-----------------------------------*\Tumbler\*-----------------------------------*/
+.tumbler-field .on {
   display: none;
 }
-.form-field .off {
+.tumbler-field .off {
   display: inline-block;
 }
-.form-field input:checked + .text .on {
+.tumbler-field input:checked + .text .on {
   display: inline-block;
 }
-.form-field input:checked + .text .off {
+.tumbler-field input:checked + .text .off {
   display: none;
 }
-.form-field .text {
+.tumbler-field .text {
   display: inline-block;
   padding-left: 3em;
   position: relative;
   box-sizing: border-box;
 }
-.form-field .text:before {
+.tumbler-field .text:before {
   content: '';
   position: absolute;
   top: 0;
@@ -892,7 +902,7 @@ li.pagination__next {
   background: #e7eaec;
   border-radius: 1em;
 }
-.form-field .text:after {
+.tumbler-field .text:after {
   content: '';
   position: absolute;
   top: 0;
@@ -904,21 +914,136 @@ li.pagination__next {
   transition: all 0.3s ease-in-out;
   border: 1px solid #e7eaec;
 }
-.form-field input:checked + .text:after {
+.tumbler-field input:checked + .text:after {
   left: 1em;
   border: 1px solid #a0d468;
 }
-.form-field input:checked + .text:before {
+.tumbler-field input:checked + .text:before {
   background-color: #a0d468;
   transition: all 0.3s ease-in-out;
 }
-.form-field input {
+.tumbler-field input {
   position: absolute;
   z-index: -1;
   opacity: 0;
 }
 form.not-active {
   opacity: .6;
+}
+/*-----------------------------------*\radio\*-----------------------------------*/
+.radio-field .on {
+  display: none;
+}
+.radio-field .off {
+  display: inline-block;
+}
+.radio-field input:checked + .text .on {
+  display: inline-block;
+}
+.radio-field input:checked + .text .off {
+  display: none;
+}
+.radio-field .text {
+  display: inline-block;
+  padding-left: 2em;
+  position: relative;
+  box-sizing: border-box;
+}
+.radio-field .text:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  background: #ffffff;
+  border-radius: 50%;
+  border: 1px solid #d8dadc;
+}
+.radio-field .text:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+.radio-field input:checked + .text:after {
+  content: '';
+  background-color: #fc6e51;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  margin: 6px;
+}
+.radio-field input:checked + .text:before {
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #fc6e51;
+}
+.radio-field input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+/*-----------------------------------*\Чеки\*-----------------------------------*/
+.checkbox-field .on {
+  display: none;
+}
+.checkbox-field .off {
+  display: inline-block;
+}
+.checkbox-field input:checked + .text .on {
+  display: inline-block;
+}
+.checkbox-field input:checked + .text .off {
+  display: none;
+}
+.checkbox-field .text {
+  display: inline-block;
+  padding-left: 2em;
+  position: relative;
+  box-sizing: border-box;
+}
+.checkbox-field .text:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  background: #ffffff;
+  border-radius: .3em;
+  border: 1px solid #d8dadc;
+}
+.checkbox-field .text:after {
+  contesdnt: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  border-radius: .3em;
+  transition: all 0.3s ease-in-out;
+}
+.checkbox-field input:checked + .text:after {
+  content: '\f00c';
+  font-family: FontAwesome;
+  color: #fc6e51;
+  margin: 4px;
+  font-size: 10px;
+}
+.checkbox-field input:checked + .text:before {
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #fc6e51;
+}
+.checkbox-field input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
 }
 #owl-demo .item img {
   display: block;

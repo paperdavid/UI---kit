@@ -177,17 +177,6 @@
 
     <div class="column-6">
       <div class="row">
-        <div class="column6">
-          <div class="tooltip inner">
-            <a class="tooltip__link" href="/" onclick="event.preventDefault()">Любить значит страдать?</a>
-            <div class="tooltip__text">
-              Положение сложное, Соня <i class="fa fa-caret-up"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
         <div class="column-12">
          
           <div class="tab inner">
@@ -213,6 +202,18 @@
 
         </div>
       </div>
+      <div class="row">
+        <div class="column6">
+          <div class="tooltip inner">
+            <a class="tooltip__link" href="/" onclick="event.preventDefault()">Любить значит страдать?</a>
+            <div class="tooltip__text">
+              Положение сложное, Соня <i class="fa fa-caret-up"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
     </div>
 
     </div>
@@ -230,21 +231,82 @@
     <div class="row">
       <div class="column-4 inner"></div>
       <div class="column-4 inner"></div>
-      <div class="column-3">
-        <div class="row">
+      <div class="column-4">
+        <div class="row inner">
+
+
+                                                                      <!-- Радио -->
+
           <div class="column-6">
-            
+
+            <form action="#" class="not-active">
+              <label class="radio-field">
+                <input type="radio" disabled/>
+                <span class="text">Неактивно</span>
+              </label>
+            </form> 
+
+            <form action="#">
+              <label class="radio-field">
+                <input type="radio"/>
+                <span class="text">Активно</span>
+              </label>
+            </form>  
+
+            <form action="#">
+              <label class="radio-field">
+                <input type="radio" checked/>
+                <span class="text">Отмечено</span>
+              </label>
+            </form> 
           </div>
+
+
+                                                                      <!-- Чеки -->
+
           <div class="column-6">
-            
+
+            <form action="#" class="not-active">
+              <label class="checkbox-field">
+                <input type="checkbox" disabled />
+                <span class="text">
+                  <span class="on">Отмечено</span>
+                  <span class="off">Неактивно</span>
+                </span>
+              </label>
+            </form>  
+
+            <form action="#">
+              <label class="checkbox-field">
+                <input type="checkbox"/>
+                <span class="text">
+                  <span class="on">Отмечено</span>
+                  <span class="off">Активно</span>
+                </span>
+              </label>
+            </form>  
+
+            <form action="#">
+              <label class="checkbox-field">
+                <input type="checkbox" checked/>
+                <span class="text">
+                  <span class="on">Отмечено</span>
+                  <span class="off">Активно</span>
+                </span>
+              </label>
+            </form>  
+
           </div>
         </div>
+
+
+                                                                      <!-- Тумблеры -->
         <div class="row inner">
           <div class="column-6">
 
             <form action="#" class="not-active">
-              <label class="form-field">
-                <input type="checkbox" />
+              <label class="tumbler-field">
+                <input type="checkbox" disabled/>
                 <span class="text">
                   <span class="on">Включено</span>
                   <span class="off">Неактивно</span>
@@ -254,7 +316,7 @@
 
             
             <form action="#">
-              <label class="form-field">
+              <label class="tumbler-field">
                 <input type="checkbox" />
                 <span class="text">
                   <span class="on">Включено</span>
@@ -264,7 +326,7 @@
             </form>  
 
             <form action="#">
-              <label class="form-field">
+              <label class="tumbler-field">
                 <input type="checkbox" checked/>
                 <span class="text">
                   <span class="on">Включено</span>
