@@ -229,13 +229,45 @@
       <hr>
     </div>
     <div class="row">
-      <div class="column-4 inner"></div>
-      <div class="column-4 inner"></div>
-      <div class="column-4">
-        <div class="row inner">
+
+        
+
+                                                                      <!-- Inputs -->
+      <div class="column-4 inner">
+
+            <form action="#">
+                <input class="input input-default" type="text" value="" placeholder="Полковнику никто не пишет"/>
+            </form>  
+
+            <form action="#">
+                <input class="input input-focus" type="text" value="" placeholder="Пишет!"/>
+            </form> 
+            <form action="#">
+                <input class="input input-error" type="text" value="" placeholder="Но не то"/>
+                <span class="input-error-icon"></span>
+            </form> 
+            <form action="#">
+                <input class="input input-correct" type="text" value="" placeholder="А, нет, все правильно!"/>
+                <span class="input-correct-icon"></span>
+            </form>  
+
+      </div>
+   
+
+
+                                                                      <!-- Tags -->
+
+      <div class="column-4 inner">
+      
+      </div>
+
 
 
                                                                       <!-- Радио -->
+
+      <div class="column-4">
+        <div class="row inner">
+
 
           <div class="column-6">
 
@@ -357,11 +389,13 @@
   <script src="js/tooltip.js"></script>
   <script src="js/tabs.js"></script>
 
+
+<!-- Owl Carousel -->
   <script>
     $(document).ready(function() {
           $("#owl-demo").owlCarousel({
             
-            navigation : false, // Show next and prev buttons
+            navigation : true, // Show next and prev buttons
             slideSpeed : 300,
             paginationSpeed : 400,
             singleItem:true
@@ -376,5 +410,25 @@
       });
   </script>
 
+
+<!-- Выключение ссылок -->
+  <script>
+    $(document).ready(function() {
+
+      $('a').on('click', function(){
+        return false;
+      });
+    });
+  </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+

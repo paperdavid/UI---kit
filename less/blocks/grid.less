@@ -12,6 +12,12 @@ width: (@i * 100% / @n);
 .generate-columns(12);
 
 
+.inner {
+    background-color: @white-color;
+    padding: 30px;
+    border-radius: 5px;
+    margin: 18px 0;
+}
 
 div[class*="column"] {
   float: left;
@@ -21,6 +27,12 @@ div[class*="column"] {
 
 * {
   user-select: none;
+  box-sizing: border-box;
+  
+  *:focus {
+    outline: none;
+  }
+
 }
 
 
@@ -89,8 +101,6 @@ body {
 .margin-left {
   margin-left: -28px;
 }
-
-
 
 
 

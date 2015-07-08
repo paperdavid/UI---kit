@@ -390,6 +390,12 @@ th {
 .column-12 {
   width: 100%;
 }
+.inner {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 5px;
+  margin: 18px 0;
+}
 div[class*="column"] {
   float: left;
   box-sizing: border-box;
@@ -400,6 +406,10 @@ div[class*="column"] {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  box-sizing: border-box;
+}
+* *:focus {
+  outline: none;
 }
 body {
   background-color: #f0f2f5;
@@ -768,12 +778,6 @@ img {
 .show {
   opacity: 1;
 }
-.inner {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 5px;
-  margin: 18px 0;
-}
 .pagination__list {
   text-align: center;
   padding: 0;
@@ -820,6 +824,7 @@ li.pagination__next {
 .tab {
   position: relative;
   min-height: 210px;
+  box-sizing: content-box;
 }
 .tab__titles {
   padding: 0;
@@ -872,6 +877,7 @@ li.pagination__next {
 }
 form {
   margin: .5em 0;
+  position: relative;
 }
 /*-----------------------------------*\Tumbler\*-----------------------------------*/
 .tumbler-field .on {
@@ -1045,6 +1051,68 @@ form.not-active {
   z-index: -1;
   opacity: 0;
 }
+.input {
+  width: 20em;
+  padding: 10px 14px;
+  border-radius: 5px;
+  border: 1px solid #d8dadc;
+  color: #d8dadc;
+  margin: 0.5em 0;
+  opacity: .4;
+}
+.input:focus {
+  border: 1px solid #5e6e75;
+  color: #536167;
+  opacity: 1;
+}
+.input:focus::-webkit-input-placeholder {
+  color: #5e6e75;
+}
+.input-focus {
+  border: 1px solid #5e6e75;
+  color: #536167;
+  opacity: 1;
+}
+.input-error {
+  border: 1px solid #fc6e51;
+  opacity: 1;
+}
+.input-correct {
+  border: 1px solid #a0d468;
+  opacity: 1;
+}
+.input-correct:before {
+  content: '\f00d';
+  font-size: 5px;
+  font-family: FontAwesome;
+  width: 5px;
+  height: 5px;
+}
+::-webkit-input-placeholder {
+  color: #5e6e75;
+}
+::-webkit-value {
+  color: #ff0;
+}
+.input-error-icon:after {
+  content: '\f00d';
+  font-size: 19px;
+  font-family: FontAwesome;
+  color: #fc6e51;
+  position: absolute;
+  top: 1em;
+  right: 3em;
+  width: 18px;
+}
+.input-correct-icon:after {
+  content: '\f00c';
+  font-size: 19px;
+  font-family: FontAwesome;
+  color: #a0d468;
+  position: absolute;
+  top: 1em;
+  right: 3em;
+}
 #owl-demo .item img {
   display: block;
   width: 100%;
@@ -1059,7 +1127,7 @@ form.not-active {
 .owl-controls {
   position: relative;
 }
-.owl-pagination:before {
+.owl-prev:before {
   content: '\f053';
   color: #fc6e51;
   display: inline-block;
@@ -1071,7 +1139,7 @@ form.not-active {
   font-family: FontAwesome;
   cursor: pointer;
 }
-.owl-pagination:after {
+.owl-next:after {
   content: '\f054';
   color: #fc6e51;
   display: inline-block;
